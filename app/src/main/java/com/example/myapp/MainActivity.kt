@@ -177,6 +177,18 @@ fun ComponentesBasicos(modifier: Modifier = Modifier) {
         ) {
             Text("Abrir GPS")
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = {
+                val intent = android.content.Intent(context, RetoActivity::class.java)
+                context.startActivity(intent)
+            },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB71C1C)) // Rojo intenso
+        ) {
+            Text("RETO (Accidentes)")
+        }
     }
 }
 
